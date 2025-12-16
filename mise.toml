@@ -1,0 +1,7 @@
+[tools]
+helm = "latest"
+tilt = "latest"
+kubectl = "latest"
+
+[settings]
+experimental = true
