@@ -16,10 +16,15 @@
 #
 #Write-Host "Installed tilt"
 
+#Write-Host "Installing dive"
+#
+#winget install --id wagoodman.dive
+#
+#Write-Host "Installing dive"
 
 #Write-Host "Adding to path variables"
 #$env:Path+=";C:\Users\Administrator\bin\tilt.exe"
-#$env:Path+=";C:\Users\Administrator\AppData\Local\Microsoft\WinGet\Links\helm.exe"
+#$env:Path+=";C:\Users\Administrator\AppData\Local\Microsoft\WinGet\Links\"
 #$env:Path+=";C:\Program Files\Docker\Docker\resources\bin\kubectl.exe"
 #$env:Path+=";C:\Users\Administrator\AppData\Local\Microsoft\WinGet\Packages\jdx.mise_Microsoft.Winget.Source_8wekyb3d8bbwe\mise\bin"
 #[System.Environment]::SetEnvironmentVariable("Path",$env:Path,"User")
