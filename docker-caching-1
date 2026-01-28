@@ -1,0 +1,12 @@
+FROM ubuntu:22.04
+
+WORKDIR /app
+
+# Step 1: Copy a file
+COPY message.txt /app/message.txt
+
+# Step 2: Run a command using that file
+RUN echo "File content is:" && cat /app/message.txt
+
+# Step 3: Another independent layer
+RUN echo "This is another layer"
