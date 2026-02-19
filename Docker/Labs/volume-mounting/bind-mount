@@ -1,0 +1,14 @@
+nginx -- index.html path
+
+/usr/share/nginx/html/    -- folder
+
+-v <hostfolderpath>:<containerfolderpath>
+
+-p <hostport>:<containerport>
+
+--name name of the container
+
+
+docker run -d --name nginx-v1 -v D:\Main\kubernetestraining\Docker\Labs\volume-mounting\nginx-files:/usr/share/nginx/html -p 80:80 nginx
+
+docker run -d --name nginx-v1 --mount type=bind,source=D:\Main\kubernetestraining\Docker\Labs\volume-mounting\nginx-files,target=/usr/share/nginx/html,readonly -p 80:80 nginx

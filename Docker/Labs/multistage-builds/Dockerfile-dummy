@@ -1,0 +1,14 @@
+FROM microsoft-build as builder   --- 800 MB ( Build tools , SDK)
+
+WORKDIR /app
+COPY <srcode> /app   --- ~1.8 GB image 
+RUN dotnet build .   --> 2 GB  test.exe (200MB)
+#---> Temporary image got created 
+#---> new stage starts and hence a new image 
+
+#FROM microsoft-runtime  --- 120 MB (runtime)
+#WORKDIR /app 
+
+#COPY --from=builder /app/bin/  /app   --> test.exe  320MB
+
+CMD ["dotnet","run","/bin/test.exe"]  --- 2GB  --> 320 MB

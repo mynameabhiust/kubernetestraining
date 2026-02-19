@@ -1,0 +1,7 @@
+docker volume create nginx-vol
+
+docker run -d --name nginx-v1 -v nginx-vol:/usr/share/nginx/html -p 80:80 nginx
+
+docker cp D:\Main\kubernetestraining\Docker\Labs\volume-mounting\nginx-files\index.html nginx-v1:/usr/share/nginx/html/index.html
+
+docker cp <source-path> <container>:<path>
